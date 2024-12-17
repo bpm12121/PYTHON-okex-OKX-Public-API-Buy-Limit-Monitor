@@ -16,3 +16,6 @@ You can easily modify the script to monitor a different trading pair. In the lin
 
 ```python
 result = publicDataAPI.get_price_limit(instId="BTC-USD-SWAP")
+
+Finding Available Trading Pairs:
+To find the list of available trading pairs, refer to OKX's official API documentation. There, you'll find the correct instId values for the pairs you want to track.
