@@ -1,0 +1,6 @@
+#Clone this repository:
+git clone https://github.com/your-username/okx-buy-limit-monitor.git
+#Navigate to the project directory:
+cd okx-buy-limit-monitor
+#Run the script:
+python monitor.py
