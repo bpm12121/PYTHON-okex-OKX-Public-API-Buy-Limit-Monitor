@@ -1,20 +1,18 @@
-# PYTHON-okex-OKX-Public-API-Buy-Limit-Monitor
-OKX Public API Buy Limit Monitor PYTHON
 # OKX Public API Buy Limit Monitor
 
-This project is a Python script that monitors the buy limit (`buyLmt`) data for the `BTC-USD-SWAP` instrument from the OKX Public API. The script tracks the change rate of the buy limit over time and prints the change rate to the console every 10 seconds.
+This project is a Python script that monitors the `buyLmt` data for the `BTC-USD-SWAP` instrument from the OKX Public API. It tracks the change rate of the `buyLmt` over time and prints the change rate to the console.
 
 ## Features
-- Fetches `buyLmt` data every 3 seconds from OKX Public API.
+- Fetches `buyLmt` data every 3 seconds from the OKX Public API.
 - Tracks the change rate of `buyLmt` over time.
-- Highlights the change rate in green for positive change and red for negative change.
-- Runs indefinitely, printing data at regular intervals.
+- Prints the change rate in green for positive changes and red for negative changes.
+- Runs continuously, updating every 10 seconds.
 
-## Requirements
-- Python 3.x
-- `colorama` library for colored output in the terminal.
+## About BTC-USD-SWAP
+By default, the script monitors the `BTC-USD-SWAP` trading pair, which is a **Bitcoin Futures contract** on OKX. This pair is used for trading Bitcoin with USDT in the futures market.
 
-### Install dependencies:
-To run this script, you need to install the following dependencies:
-```bash
-pip install colorama
+## Change Trading Pair
+You can easily modify the script to monitor a different trading pair. In the line:
+
+```python
+result = publicDataAPI.get_price_limit(instId="BTC-USD-SWAP")
